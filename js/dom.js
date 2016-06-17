@@ -77,7 +77,7 @@ function generateOnLoad()
     }
     
     //generate slider
-    $(tableDoms[0]).after('<br><div id="slider"><div>srgef</div></div>');
+    $(tableDoms[0]).after('<br><div id="slider" draggable = "true"><div>srgef</div></div>');
 }
 
 
