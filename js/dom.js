@@ -31,7 +31,12 @@ function generateRight(tableIndex,tableDoms)
     }
 }
 
-
+function logger( ev )
+{
+    console.log(ev.clientY);
+    
+}
+    
 
 
 
@@ -77,35 +82,12 @@ function generateOnLoad()
     }
     
     //generate slider
-    $(tableDoms[0]).after('<br><div id="slider" draggable = "true" ondrag = "logger()"><div>srgef</div></div>');
-    function logger( ev )
-    {
-        console.log("efef");
-    }
+    
+    $(tableDoms[0]).after('<br><div id="slider" draggable = "true" ondrag = "logger( event )"><div>srgef</div></div>');
+    
 }
 
 
-/*function moveSlider()
-{
-    var curxpos =0;
-    var curypos = 0;
-    var curdown = false;
-    var sliderDom = document.getElementById('slider');
-    
-    sliderDom.addEventListener('mousemove', function(e)
-    { 
-        if(curDown === true)
-        {
-            sliderDom.scrollTo( sliderDom.scrollTop + (curYPos - e.pageY));
-        }
-    });
-
-    window.addEventListener('mousedown', function(e){ curDown = true; curYPos = e.pageY; curXPos = e.pageX; });
-    window.addEventListener('mouseup', function(e){ curDown = false; });
-
-}*/
-
 window.onload = function(){
     getDetails();
-    //moveSlider();
 };
