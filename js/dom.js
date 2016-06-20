@@ -34,9 +34,8 @@ function generateRight(tableIndex,tableDoms)
 function logger( ev )
 {
     console.log(ev.clientY);
-    
+    document.getElementById('slider').style.top = "1px";
 }
-    
 
 
 
