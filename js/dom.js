@@ -31,11 +31,6 @@ function generateRight(tableIndex,tableDoms)
     }
 }
 
-function logger( ev )
-{
-    console.log(ev.clientY);
-    document.getElementById('slider').style.top = "1px";
-}
 
 
 
@@ -82,11 +77,16 @@ function generateOnLoad()
     
     //generate slider
     
-    $(tableDoms[0]).after('<br><div id="slider" draggable = "true" ondrag = "logger( event )"><div>srgef</div></div>');
+    $(tableDoms[0]).after('<br><div id="slider" draggable = "true"><div>srgef</div></div>');
     
 }
 
 
 window.onload = function(){
     getDetails();
+    
+    var slider = document.getElementById('slider');
+    document.addEventListener('drag',function( e ){
+            console.log(e.target);
+    },false);
 };
